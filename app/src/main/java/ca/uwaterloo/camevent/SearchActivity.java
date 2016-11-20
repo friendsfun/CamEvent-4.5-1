@@ -89,6 +89,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         intent.putExtra("fromDateData",fromDateData);
         intent.putExtra("keyData",keyWordData);
         startActivity(intent);
+        finish();
     }
 
 }

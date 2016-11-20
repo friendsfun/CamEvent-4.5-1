@@ -67,12 +67,11 @@ public class Frag_login extends Fragment {
                     .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+                            progressDialog.dismiss();
                             if(task.isSuccessful()) {
-                                progressDialog.dismiss();
                                 startActivity(new Intent(getActivity(), MainActivity.class));
-                                //getActivity().finish();
+                                getActivity().finish();
                             } else {
-                                progressDialog.dismiss();
                                 Toast.makeText(getActivity().getApplicationContext(),
                                         "Could not log in. Please try again!",
                                         Toast.LENGTH_SHORT).show();

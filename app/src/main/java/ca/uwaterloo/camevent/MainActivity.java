@@ -138,6 +138,7 @@ public class  MainActivity extends BaseActivity implements NavigationView.OnNavi
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
+        finish();
     }
 
 
